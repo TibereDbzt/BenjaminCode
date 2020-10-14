@@ -1,0 +1,95 @@
+.content
+  flex-grow: 1
+  display: flex
+  flex-wrap: nowrap
+
+  @include tablet
+    flex-direction: column-reverse
+
+  .parallax_container
+    position: relative
+    display: flex
+    flex-direction: column-reverse
+
+    @include tablet
+      align-items: center
+
+    .circle
+      position: absolute
+      border-radius: 50%
+      background-color: $yellow
+
+      &.big
+        bottom: 35px
+        left: 60px
+        width: 514px
+        height: 514px
+        z-index: -1
+
+        @include tablet
+          width: 500px
+          height: 500px
+          bottom: 20px
+          left: 15%
+
+        @media screen and (max-width: 720px)
+          width: 300px
+          height: 300px
+
+        @media screen and (max-width: 450px)
+          width: 200px
+          height: 200px
+
+      &.small
+        bottom: 100px
+        left: 55%
+        width: 44px
+        height: 44px
+        z-index: 2
+
+        @include tablet
+          width: 30px
+          height: 30px
+
+    .photo_author-container
+      margin: 0 20px
+
+      .photo_author
+        bottom: 0
+        left: 80px
+        width: 690px
+        height: auto
+        margin-bottom: -6px
+        z-index: 1
+
+        @include desktop
+          margin-top: 40px
+
+        @include tablet
+            width: 100%
+
+  .description
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 0 5%
+
+    @include tablet
+      margin-top: 40px
+      margin-bottom: auto
+
+    > p
+      line-height: 28px
+      //font-size: 1.25rem
+
+    .mail-adress
+      display: flex
+      align-items: center
+      margin: 13px 0
+
+      .mail-icon
+        width: 33px
+        padding-right: 12px
+
+        > path
+          fill: $yellow

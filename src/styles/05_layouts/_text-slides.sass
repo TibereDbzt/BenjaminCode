@@ -1,0 +1,28 @@
+.jobs_container
+  width: fit-content
+  padding: 8px 0 8px 0
+  border-top: 7px solid $yellow
+  border-bottom: 7px solid $yellow
+
+.text-sliding
+  display: flex
+  flex-wrap: nowrap
+
+  > *
+    transform: translate3d(0, 0, 0)
+    white-space: nowrap
+    margin: 0 20px
+
+  &.left
+    animation: SlidingLeft 24s linear infinite
+
+    > :nth-child(odd)
+      -webkit-text-stroke: 2px $yellow
+      -webkit-text-fill-color: transparent
+
+  &.right
+    animation: SlidingRight 26s linear infinite
+
+    > :nth-child(even)
+      -webkit-text-stroke: 1px $yellow
+      -webkit-text-fill-color: transparent
